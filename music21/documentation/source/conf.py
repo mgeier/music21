@@ -27,7 +27,8 @@ extensions = [
     'sphinx.ext.autodoc',
     #'sphinx.ext.viewcode',
     'music21.documentation.extensions',
-    ]
+    'nbsphinx',
+]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -71,7 +72,7 @@ except ImportError:
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = []
+exclude_patterns = ['**.ipynb_checkpoints']
 
 # The reST default role (used for this markup: `text`) to use for all documents.
 #default_role = None
@@ -145,8 +146,8 @@ html_last_updated_fmt = '%b %d, %Y'
 
 # Custom sidebar templates, maps document names to template names.
 html_sidebars = {'**': [
-    'relations.html', 
-    'localtoc.html', 
+    'relations.html',
+    'localtoc.html',
     'globaltoc.html',
     'searchbox.html',
     'sourcelink.html',
